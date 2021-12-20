@@ -1,10 +1,12 @@
 package frame.base;
 
+import frame.components.AppStartPanel;
 import frame.components.HomePanel;
-import frame.components.AppPanel;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 /**
  * 최초 설정 프레임
@@ -14,7 +16,6 @@ public class Base extends JFrame {
     private static Base instance;
 	// CardLayOut 객체  통해 하나의 프레임에 각 패널들을 삽입
 	private final CardLayout cards = new CardLayout();
-	private final Image image = new ImageIcon("./resources/img/base_img.png").getImage();
     /**
      * 생성자
 	 *  - 기본 JFrame 구조 셋팅
@@ -25,7 +26,7 @@ public class Base extends JFrame {
 		//최초실행시 보여질 화면, 그리고 따로 만들어진 각각의 패널들을 삽입
 
 		getContentPane().add(new HomePanel(this));
-		getContentPane().add(new AppPanel(this));
+		getContentPane().add(new AppStartPanel(this));
 
 		setBackground(Color.WHITE);
 		setSize(450, 940);
@@ -42,9 +43,20 @@ public class Base extends JFrame {
 		setLocation((screenSize.width - frameSize.width)/2, (screenSize.height - frameSize.height)/2);
 
 		// 메인 프레임 닫기(x) 버튼 누르면 종료됨
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    }
+//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		this.addWindowListener(new JFrameWindowClosingEventHandler());
 
+    }
+	class JFrameWindowClosingEventHandler extends WindowAdapter {
+		public void windowClosing(WindowEvent e) {
+			JFrame frame = (JFrame)e.getWindow();
+			// yer = 0, no = 1
+			int result = JOptionPane.showConfirmDialog(null, "정말 앱을 종료 하시겠습니까?", "Confirm", JOptionPane.YES_NO_OPTION);
+			if (result == 0 ){
+//				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			}
+		}
+	}
 	/**
 	 * 클릭시 패널을 겹치게 한다
 	 */
