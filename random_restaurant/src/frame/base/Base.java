@@ -1,6 +1,7 @@
 package frame.base;
 
-import frame.components.home.Home;
+import frame.components.HomePanel;
+import frame.components.AppPanel;
 
 import javax.swing.*;
 import java.awt.*;
@@ -22,12 +23,15 @@ public class Base extends JFrame {
 
 		getContentPane().setLayout(cards);
 		//최초실행시 보여질 화면, 그리고 따로 만들어진 각각의 패널들을 삽입
-		getContentPane().add(new Home(this));
+
+		getContentPane().add(new HomePanel(this));
+		getContentPane().add(new AppPanel(this));
 
 		setBackground(Color.WHITE);
 		setSize(450, 940);
 		setVisible(true);
-//		setIconImage();
+		setResizable(false);
+
 
 		// 프레임 사이즈 얻기
 		Dimension frameSize = getSize();
