@@ -1,5 +1,6 @@
 package frame.components;
 
+import frame.AppFrame;
 import service.RestaurantDB;
 import utils.ButtonUtils;
 
@@ -12,9 +13,8 @@ public class AppCategoryPanel extends JPanel {
 
     /**
      * 생성자
-     *
-     * @param
      * @param appFrameBase
+     * @param restaurantDB
      */
     public AppCategoryPanel(AppFrame appFrameBase, RestaurantDB restaurantDB) {
 

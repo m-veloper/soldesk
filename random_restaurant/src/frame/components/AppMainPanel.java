@@ -1,5 +1,6 @@
 package frame.components;
 
+import frame.AppFrame;
 import service.RestaurantDB;
 import utils.ButtonUtils;
 
@@ -12,10 +13,9 @@ public class AppMainPanel extends JPanel {
 
     /**
      * 생성자
-     * @param
      * @param appFrameBase
      */
-    public AppMainPanel(AppFrame appFrameBase, RestaurantDB restaurantDB) {
+    public AppMainPanel(AppFrame appFrameBase) {
         setLayout(null);
         ButtonUtils buttonUtils = new ButtonUtils();
         JButton back = buttonUtils.back();

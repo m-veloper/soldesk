@@ -1,7 +1,6 @@
 package frame.components;
 
-import service.Restaurant;
-import service.RestaurantDB;
+import frame.AppFrame;
 import utils.ButtonUtils;
 
 import javax.swing.*;
@@ -13,11 +12,9 @@ public class AppStartPanel extends JPanel {
 
     /**
      * 생성자
-     *
-     * @param
      * @param appFrameBase
      */
-    public AppStartPanel(AppFrame appFrameBase, RestaurantDB restaurantDB) {
+    public AppStartPanel(AppFrame appFrameBase) {
         setLayout(null);
         ButtonUtils buttonUtils = new ButtonUtils();
         JButton start = buttonUtils.start();
@@ -33,7 +30,7 @@ public class AppStartPanel extends JPanel {
 
         close.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                System.exit(0);
+                appFrameBase.getCardLayout().show(appFrameBase.getContentPane(), "appBase");
             }
         });
     }

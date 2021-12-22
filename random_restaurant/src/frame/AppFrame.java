@@ -1,5 +1,6 @@
-package frame.components;
+package frame;
 
+import frame.components.*;
 import service.RestaurantDB;
 import utils.FrameUtils;
 
@@ -22,10 +23,11 @@ public class AppFrame extends JFrame {
      */
     public AppFrame() {
         getContentPane().setLayout(cards);
-        getContentPane().removeAll();
+//        getContentPane().removeAll();
 
-        getContentPane().add("appStart", new AppStartPanel(this, restaurantDB));
-        getContentPane().add("appMain", new AppMainPanel(this, restaurantDB));
+        getContentPane().add("appBase", new AppBasePanel(this));
+        getContentPane().add("appStart", new AppStartPanel(this));
+        getContentPane().add("appMain", new AppMainPanel(this));
         getContentPane().add("appRandom", new AppRandomPanel(this, restaurantDB));
         getContentPane().add("appCategory", new AppCategoryPanel(this, restaurantDB));
 
@@ -46,7 +48,7 @@ public class AppFrame extends JFrame {
     public static void getInstance() {
         //static으로 선언했으므로 해당 메서드가 생성자보다도 먼저 호출된다
         instance = new AppFrame();//생성자를 통해 기본 프레임 정의
-        instance.removeAll();
+//        instance.removeAll();
         instance.revalidate(); //레이아웃 관리자에게 레이아웃정보를 다시 계산하도록 지시
         instance.repaint(); //레이아웃을 새로 그린다
     }

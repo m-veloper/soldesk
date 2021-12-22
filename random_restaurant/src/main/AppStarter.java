@@ -1,9 +1,9 @@
 package main;
 
-import frame.base.Base;
+import frame.AppFrame;
 
 public class AppStarter {
     public static void main(String[] args) {
-        Base.getInstance();
+        AppFrame.getInstance();
     }
 }

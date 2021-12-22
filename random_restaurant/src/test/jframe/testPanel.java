@@ -1,4 +1,4 @@
-package frame;
+package test.jframe;
 
 import javax.swing.*;
 import java.awt.event.*;

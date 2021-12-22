@@ -1,8 +1,8 @@
-package frame;
+package test.jframe;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+
 class BackgroundImageJFrame extends JFrame
 {
     JButton b1;
