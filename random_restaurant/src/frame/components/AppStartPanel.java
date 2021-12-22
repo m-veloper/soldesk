@@ -1,25 +1,31 @@
 package frame.components;
 
-import common.ScheduleImpl;
-import frame.base.Base;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AppStartPanel extends JPanel {
+import static common.ComponentUtils.setTransparencyButton;
 
-    private Base reBase;
-    private final ScheduleImpl schedule = new ScheduleImpl();
+public class AppStartPanel extends JPanel {
 
     /**
      * 생성자
+     *
+     * @param
+     * @param appFrameBase
      */
-    public AppStartPanel(Base base) {
-        setBackground(Color.WHITE);
-        setVisible(true);
-        schedule.closePanel(this);
+    public AppStartPanel(AppFrame appFrameBase) {
+        setLayout(null);
+        JButton start = setTransparencyButton(new JButton(),
+                        "./random_restaurant/resources/img/icon/start_icon.png",
+                        80, 600,230, 40);
+        add(start);
+        start.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                appFrameBase.getCardLayout().show(appFrameBase.getContentPane(), "appMain");
+            }
+        });
     }
 
     /**

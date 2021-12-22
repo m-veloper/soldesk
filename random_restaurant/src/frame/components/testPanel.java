@@ -45,7 +45,6 @@ public class testPanel {
         }  );
 
 
-
         frame.add(panel);
 
         frame.setResizable(false);
