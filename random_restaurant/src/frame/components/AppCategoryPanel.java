@@ -1,6 +1,5 @@
 package frame.components;
 
-import service.Restaurant;
 import service.RestaurantDB;
 import utils.ButtonUtils;
 
@@ -9,7 +8,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AppStartPanel extends JPanel {
+public class AppCategoryPanel extends JPanel {
 
     /**
      * 생성자
@@ -17,35 +16,33 @@ public class AppStartPanel extends JPanel {
      * @param
      * @param appFrameBase
      */
-    public AppStartPanel(AppFrame appFrameBase, RestaurantDB restaurantDB) {
+    public AppCategoryPanel(AppFrame appFrameBase, RestaurantDB restaurantDB) {
+
         setLayout(null);
         ButtonUtils buttonUtils = new ButtonUtils();
-        JButton start = buttonUtils.start();
-        JButton close = buttonUtils.close();
-        add(start);
-        add(close);
 
-        start.addActionListener(new ActionListener() {
+        JButton back = buttonUtils.back();
+
+        back.addActionListener(new ActionListener() {
+            @Override
             public void actionPerformed(ActionEvent e) {
                 appFrameBase.getCardLayout().show(appFrameBase.getContentPane(), "appMain");
             }
         });
 
-        close.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
+        add(back);
     }
+
 
     /**
      * 패널 배경 이미지 넣기
      * background 를 그려준다
+     *
      * @param g
      */
     @Override
-    public void paintComponent(Graphics g){
-        Image image = new ImageIcon("./random_restaurant/resources/img/app_start_panel.png").getImage();
+    public void paintComponent(Graphics g) {
+        Image image = new ImageIcon("./random_restaurant/resources/img/app_panel.png").getImage();
         g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
     }
 }

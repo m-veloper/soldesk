@@ -1,5 +1,7 @@
 package frame.components;
 
+import model.RestaurantDto;
+import service.Restaurant;
 import service.RestaurantDB;
 import utils.ButtonUtils;
 
@@ -8,42 +10,46 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class AppMainPanel extends JPanel {
+public class AppRandomPanel extends JPanel {
+
+    private RestaurantDto restaurantDto;
+    private Restaurant restaurant;
+    private ButtonUtils buttonUtils;
 
     /**
      * 생성자
      * @param
      * @param appFrameBase
      */
-    public AppMainPanel(AppFrame appFrameBase, RestaurantDB restaurantDB) {
+    public AppRandomPanel(AppFrame appFrameBase, RestaurantDB restaurantDB) {
         setLayout(null);
-        ButtonUtils buttonUtils = new ButtonUtils();
+
+        restaurant = new Restaurant();
+        buttonUtils = new ButtonUtils();
+
         JButton back = buttonUtils.back();
-        JButton random = buttonUtils.random();
-        JButton category = buttonUtils.category();
+        JButton start = buttonUtils.start();
+
+        JTextArea resultArea = new JTextArea();
+        resultArea.setBounds(80,150, 200,200);
+        resultArea.setBackground(Color.cyan);
 
         add(back);
-        add(random);
-        add(category);
+        add(start);
+        add(resultArea);
 
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                appFrameBase.getCardLayout().show(appFrameBase.getContentPane(), "appStart");
+                resultArea.setText("");
+                appFrameBase.getCardLayout().show(appFrameBase.getContentPane(), "appMain");
             }
         });
-
-        random.addActionListener(new ActionListener() {
+        start.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                appFrameBase.getCardLayout().show(appFrameBase.getContentPane(), "appRandom");
-            }
-        });
-
-        category.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                appFrameBase.getCardLayout().show(appFrameBase.getContentPane(), "appCategory");
+                restaurantDto = restaurant.getRandomRestaurant(restaurantDB);
+                resultArea.setText(restaurantDto.getPlaceName());
             }
         });
     }

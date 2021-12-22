@@ -1,15 +1,13 @@
 package frame.base;
 
+import utils.ButtonUtils;
+import utils.FrameUtils;
 import frame.components.AppFrame;
-import frame.components.AppStartPanel;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-import static common.ComponentUtils.setFrameSettings;
-import static common.ComponentUtils.setTransparencyButton;
 
 /**
  * 최초 설정 프레임
@@ -17,24 +15,19 @@ import static common.ComponentUtils.setTransparencyButton;
 public class Base extends JFrame {
 
     private static Base instance;
+    private FrameUtils frameUtils = new FrameUtils();
+    private ButtonUtils buttonUtils = new ButtonUtils();
+
     /**
      * 생성자
 	 *  - 기본 JFrame 구조 셋팅
 	 * @param
 	 */
     private Base() {
-    	setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setContentPane(new JLabel(new ImageIcon("./random_restaurant/resources/img/base_img.png")));
-
-		// 투명 버튼 셋팅
-		JButton appIconBtn = setTransparencyButton(new JButton(),
-					"./random_restaurant/resources/img/icon/app_icon.png",
-							46, 465, 62, 62);
+		frameUtils.setBackgroundImg(this);
+		JButton appIconBtn = buttonUtils.appIcon();
 		add(appIconBtn);
-
-		// 기본 셋팅 설정
-		setFrameSettings(this);
-
+		frameUtils.setFrameSettings(this);
 		appIconBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				// 최소화
