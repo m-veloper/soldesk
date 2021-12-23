@@ -100,17 +100,5 @@ public class RestaurantDto {
         this.id = id;
     }
 
-    /**
-     * 객체 데이터 출력
-     */
-    public void print() {
-        System.out.println("| 매장 이름 : " + placeName + "\t|");
-        System.out.println("| 카테고리 : " + categoryName + " > " + categoryDetail + "\t|");
-        System.out.println("| 주소 : " + roadAddressName + "\t|");
-        System.out.println("| 대표 메뉴 : " + placeBest + "\t|");
-        System.out.println("| 매장 연락처 : " + phone + "\t|");
-        System.out.println("| 링크 : " + placeUrl + "\t|");
-
-    }
 }
 

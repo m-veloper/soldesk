@@ -10,21 +10,16 @@ import java.awt.event.ActionListener;
 
 public class AppBasePanel extends JPanel {
 
+    private ButtonUtils buttonUtils;
     /**
      * 생성자
      * @param appFrame
      */
     public AppBasePanel(AppFrame appFrame) {
         setLayout(null);
-        ButtonUtils buttonUtils = new ButtonUtils();
-		JButton appIconBtn = buttonUtils.appIcon();
-		add(appIconBtn);
-
-        appIconBtn.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                appFrame.getCardLayout().show(appFrame.getContentPane(), "appStart");
-            }
-        });
+        buttonUtils = new ButtonUtils();
+		JButton runApp = buttonUtils.runApp(appFrame);
+		add(runApp);
     }
 
     /**

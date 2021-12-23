@@ -1,7 +1,10 @@
 package frame;
 
+import constant.Panels;
 import frame.components.*;
+import model.ButtonActionStatusDto;
 import service.RestaurantDB;
+import utils.ButtonUtils;
 import utils.FrameUtils;
 
 import javax.swing.*;
@@ -11,10 +14,11 @@ import java.awt.*;
 public class AppFrame extends JFrame {
 
     // CardLayOut 객체  통해 하나의 프레임에 각 패널들을 삽입
-    private final CardLayout cards = new CardLayout();
-    private FrameUtils frameUtils = new FrameUtils();
-    private RestaurantDB restaurantDB = new RestaurantDB();
+    private final CardLayout cards;
+    private FrameUtils frameUtils;
+    private RestaurantDB restaurantDB;
     private static AppFrame instance;
+    private ButtonActionStatusDto buttonActionStatusDto;
 
     /**
      * 생성자
@@ -22,14 +26,18 @@ public class AppFrame extends JFrame {
      * @param
      */
     public AppFrame() {
-        getContentPane().setLayout(cards);
-//        getContentPane().removeAll();
+        cards = new CardLayout();
+        frameUtils = new FrameUtils();
+        restaurantDB = new RestaurantDB();
+        buttonActionStatusDto = new ButtonActionStatusDto();
 
-        getContentPane().add("appBase", new AppBasePanel(this));
-        getContentPane().add("appStart", new AppStartPanel(this));
-        getContentPane().add("appMain", new AppMainPanel(this));
-        getContentPane().add("appRandom", new AppRandomPanel(this, restaurantDB));
-        getContentPane().add("appCategory", new AppCategoryPanel(this, restaurantDB));
+        getContentPane().setLayout(cards);
+        getContentPane().add(Panels.APP_BASE.getValue(), new AppBasePanel(this));
+        getContentPane().add(Panels.APP_START.getValue(), new AppStartPanel(this));
+        getContentPane().add(Panels.APP_MAIN.getValue(), new AppMainPanel(this));
+        getContentPane().add(Panels.APP_RANDOM.getValue(), new AppRandomPanel(this, restaurantDB));
+        getContentPane().add(Panels.APP_CATEGORY.getValue(), new AppCategoryPanel(this, restaurantDB, buttonActionStatusDto));
+        getContentPane().add(Panels.APP_CATEGORY_COMMON.getValue(), new AppCategoryCommonPanel(this, restaurantDB, buttonActionStatusDto));
 
         // 기본 셋팅 설정
         frameUtils.setFrameSettings(this);

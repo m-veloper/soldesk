@@ -10,29 +10,18 @@ import java.awt.event.ActionListener;
 
 public class AppStartPanel extends JPanel {
 
+    private ButtonUtils buttonUtils;
     /**
      * 생성자
-     * @param appFrameBase
+     * @param appFrame
      */
-    public AppStartPanel(AppFrame appFrameBase) {
+    public AppStartPanel(AppFrame appFrame) {
         setLayout(null);
-        ButtonUtils buttonUtils = new ButtonUtils();
-        JButton start = buttonUtils.start();
-        JButton close = buttonUtils.close();
+        buttonUtils = new ButtonUtils();
+        JButton start = buttonUtils.start(appFrame);
+        JButton close = buttonUtils.close(appFrame);
         add(start);
         add(close);
-
-        start.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                appFrameBase.getCardLayout().show(appFrameBase.getContentPane(), "appMain");
-            }
-        });
-
-        close.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                appFrameBase.getCardLayout().show(appFrameBase.getContentPane(), "appBase");
-            }
-        });
     }
 
     /**

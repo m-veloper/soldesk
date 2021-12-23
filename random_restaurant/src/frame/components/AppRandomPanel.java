@@ -24,40 +24,41 @@ public class AppRandomPanel extends JPanel {
     /**
      * 생성자
      *
-     * @param appFrameBase
+     * @param appFrame
      * @param restaurantDB
      */
-    public AppRandomPanel(AppFrame appFrameBase, RestaurantDB restaurantDB) {
+    public AppRandomPanel(AppFrame appFrame, RestaurantDB restaurantDB) {
         setLayout(null);
-
         restaurant = new Restaurant();
         buttonUtils = new ButtonUtils();
 
-        JButton back = buttonUtils.back();
-        JButton start = buttonUtils.start();
+        JButton back = buttonUtils.goBack(appFrame, "appRandom");
+        JButton startRandom = buttonUtils.startRandom(appFrame);
 
         JTextArea resultArea = new JTextArea();
         resultArea.setBounds(80, 150, 200, 200);
         resultArea.setBackground(Color.cyan);
 
         foodImage = new JLabel("");
-        foodImage.setIcon(new ImageIcon("./random_restaurant/resources/img/korean.png"));
-        foodImage.setBounds(25, 30, 335, 425);
+        Image image = new ImageIcon("./random_restaurant/resources/img/food/korean_food.png").getImage();
+        ImageIcon imageIcon = new ImageIcon(image.getScaledInstance(200, 200, Image.SCALE_SMOOTH));
+        foodImage.setIcon(imageIcon);
+        foodImage.setBounds(150, 300, 200, 200);
         add(foodImage);
 
         add(back);
-        add(start);
+        add(startRandom);
         add(resultArea);
 
         back.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 resultArea.setText("");
-                appFrameBase.getCardLayout().show(appFrameBase.getContentPane(), "appMain");
+                appFrame.getCardLayout().show(appFrame.getContentPane(), "appMain");
             }
         });
 
-        start.addActionListener(new ActionListener() {
+        startRandom.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
 //                restaurantDto = restaurant.getRandomRestaurant(restaurantDB);
@@ -83,14 +84,15 @@ public class AppRandomPanel extends JPanel {
         g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
     }
 
+
     class ImgThread extends Thread {
 
         String[] imgs = {
-                "./random_restaurant/resources/img/korean.png",
-                "./random_restaurant/resources/img/japanese.png",
-                "./random_restaurant/resources/img/chinese.png",
-                "./random_restaurant/resources/img/western.png",
-                "./random_restaurant/resources/img/asian.png"
+                "./random_restaurant/resources/img/food/chinese_food.png",
+                "./random_restaurant/resources/img/food/korean_food.png",
+                "./random_restaurant/resources/img/food/japanese_food.png",
+                "./random_restaurant/resources/img/food/western_food.png",
+                "./random_restaurant/resources/img/food/asian_food.png"
         };
 
         @Override
@@ -100,9 +102,12 @@ public class AppRandomPanel extends JPanel {
                 while (!Thread.currentThread().isInterrupted()) {
                     for (int i = 0; i < imgs.length; i++) {
 //                        System.out.println(i);
-                        Thread.sleep(500);
+                        Thread.sleep(100);
                         ImageIcon icon = new ImageIcon(imgs[i]);
                         foodImage.setIcon(icon);
+
+                        ImageIcon imageIcon = new ImageIcon(image.getScaledInstance(200, 200, Image.SCALE_SMOOTH));
+                        foodImage.setIcon(imageIcon);
                     }
                 }
             } catch (InterruptedException e) {

@@ -11,41 +11,21 @@ import java.awt.event.ActionListener;
 
 public class AppMainPanel extends JPanel {
 
+    private ButtonUtils buttonUtils;
     /**
      * 생성자
-     * @param appFrameBase
+     * @param appFrame
      */
-    public AppMainPanel(AppFrame appFrameBase) {
+    public AppMainPanel(AppFrame appFrame) {
         setLayout(null);
-        ButtonUtils buttonUtils = new ButtonUtils();
-        JButton back = buttonUtils.back();
-        JButton random = buttonUtils.random();
-        JButton category = buttonUtils.category();
+        buttonUtils = new ButtonUtils();
+        JButton back = buttonUtils.goBack(appFrame, "appMain");
+        JButton random = buttonUtils.goRandom(appFrame);
+        JButton category = buttonUtils.goCategory(appFrame);
 
         add(back);
         add(random);
         add(category);
-
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                appFrameBase.getCardLayout().show(appFrameBase.getContentPane(), "appStart");
-            }
-        });
-
-        random.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                appFrameBase.getCardLayout().show(appFrameBase.getContentPane(), "appRandom");
-            }
-        });
-
-        category.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                appFrameBase.getCardLayout().show(appFrameBase.getContentPane(), "appCategory");
-            }
-        });
     }
 
 

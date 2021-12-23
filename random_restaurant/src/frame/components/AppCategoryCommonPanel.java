@@ -9,33 +9,31 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
-public class AppCategoryPanel extends JPanel {
+public class AppCategoryCommonPanel extends JPanel {
 
     private  ButtonUtils buttonUtils;
-    private  ArrayList<JButton> countryBtnList;
-
     /**
      * 생성자
      * @param appFrame
      * @param restaurantDB
      */
-    public AppCategoryPanel(AppFrame appFrame, RestaurantDB restaurantDB, ButtonActionStatusDto buttonActionStatusDto) {
+    public AppCategoryCommonPanel(AppFrame appFrame, RestaurantDB restaurantDB, ButtonActionStatusDto buttonActionStatusDto) {
         setLayout(null);
         buttonUtils = new ButtonUtils();
-        countryBtnList = buttonUtils.getCountryBtn(appFrame, buttonActionStatusDto);
+        appFrame.getClass().getName();
 
-
-        JButton back = buttonUtils.goBack(appFrame, "appCategory");
-        JButton korean = buttonUtils.korean();
-        JButton japanese = buttonUtils.japanese();
-        JButton chinese = buttonUtils.chinese();
-        JButton western = buttonUtils.western();
-        JButton asian = buttonUtils.asian();
+        JButton back = buttonUtils.goBack(appFrame, "appCategoryCommon");
+        JButton startRandom = buttonUtils.startRandom(appFrame);
 
         add(back);
-        countryBtnList.stream().forEach(s -> add(s));
+        add(startRandom);
+
+        startRandom.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(buttonActionStatusDto.getStatus());
+            }
+        });
     }
 
 

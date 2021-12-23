@@ -3,7 +3,7 @@ package utils;
 import javax.swing.*;
 import java.awt.*;
 
-public class FrameUtils implements FrameService {
+public class FrameUtils implements FrameUtilsService {
 
     @Override
     public JFrame setBackgroundImg(JFrame jFrame) {

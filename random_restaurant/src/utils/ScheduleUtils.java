@@ -21,6 +21,6 @@ public class ScheduleUtils {
                 thread.interrupt();
             }
         };
-        timer.schedule(timerTask, 10000);
+        timer.schedule(timerTask, 5000);
     }
 }
