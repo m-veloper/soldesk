@@ -2,12 +2,12 @@ package utils;
 
 import javax.swing.*;
 
-public interface FrameService {
+public interface Frame {
 
 
     JFrame setBackgroundImg(JFrame jFrame);
     /**
-     * ±âº» ÇÁ·¹ÀÓ ¼³Á¤À» ¼ÂÆÃÇÕ´Ï´Ù.
+     * ï¿½âº» ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
      * @param jFrame
      * @return
      */

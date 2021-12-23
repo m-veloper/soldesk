@@ -7,7 +7,8 @@ public enum Panels {
     APP_MAIN("appMain"),
     APP_RANDOM("appRandom"),
     APP_CATEGORY("appCategory"),
-    APP_CATEGORY_COMMON("appCategoryCommon");
+    APP_CATEGORY_COMMON("appCategoryCommon"),
+    APP_RANDOM_RESULT("appRandomResult");
 
     private String value;
 

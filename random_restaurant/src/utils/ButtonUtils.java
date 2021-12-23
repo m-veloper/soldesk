@@ -9,8 +9,10 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
 
-public class ButtonUtils implements ButtonUtilsService {
+public class ButtonUtils implements Button {
 
     @Override
     public JButton setTransparencyButton(String btnName, String imgPath, int x, int y, int width, int height) {
@@ -79,6 +81,9 @@ public class ButtonUtils implements ButtonUtilsService {
                     case "appCategoryCommon":
                         appFrame.getCardLayout().show(appFrame.getContentPane(), "appCategory");
                         break;
+                    case "appRandomResult":
+                        appFrame.getCardLayout().show(appFrame.getContentPane(), "appRandom");
+                        break;
                 }
             }
         });
@@ -113,7 +118,9 @@ public class ButtonUtils implements ButtonUtilsService {
         StringBuilder panelName = new StringBuilder();
         Country.getCountry().stream().forEach(
                 s -> {
-                    country.add(this.setTransparencyButton(s.get("name"), s.get("imgPath"),
+                    country.add(this.setTransparencyButton(
+                            s.get("name"),
+                            s.get("categoryImgPath"),
                             Integer.parseInt(s.get("x")),
                             Integer.parseInt(s.get("y")),
                             Integer.parseInt(s.get("width")),
@@ -144,27 +151,19 @@ public class ButtonUtils implements ButtonUtilsService {
     }
 
     @Override
-    public JButton korean() {
-        return this.setTransparencyButton("korean", "./random_restaurant/resources/img/korean.png", 86, 200, 225, 80);
+    public void interruptRandomImgTread(Thread thread, JButton jButton, AppFrame appFrame) {
+        java.util.Timer timer = new Timer();
+        TimerTask timerTask = new TimerTask() {
+            @Override
+            public void run() {
+                appFrame.getCardLayout().show(appFrame.getContentPane(), "appRandomResult");
+                thread.interrupt();
+                jButton.setEnabled(true);
+                jButton.setVisible(true);
+            }
+        };
+        timer.schedule(timerTask, 5000);
     }
 
-    @Override
-    public JButton japanese() {
-        return this.setTransparencyButton("japanese", "./random_restaurant/resources/img/japanese.png", 86, 300, 225, 80);
-    }
 
-    @Override
-    public JButton chinese() {
-        return this.setTransparencyButton("chinese", "./random_restaurant/resources/img/chinese.png", 86, 400, 225, 80);
-    }
-
-    @Override
-    public JButton western() {
-        return this.setTransparencyButton("western", "./random_restaurant/resources/img/western.png", 86, 500, 225, 80);
-    }
-
-    @Override
-    public JButton asian() {
-        return this.setTransparencyButton("asian", "./random_restaurant/resources/img/asian.png", 86, 600, 225, 80);
-    }
 }

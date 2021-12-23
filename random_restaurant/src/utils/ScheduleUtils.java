@@ -2,6 +2,7 @@ package utils;
 
 import frame.components.AppRandomPanel;
 
+import javax.swing.*;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -13,7 +14,7 @@ public class ScheduleUtils {
      * 실행 스레드를 종료 시킨다.
      * @param thread
      */
-    public static void interruptThread(Thread thread){
+    public static void interruptRandomImgTread(Thread thread){
         Timer timer = new Timer();
         TimerTask timerTask = new TimerTask() {
             @Override

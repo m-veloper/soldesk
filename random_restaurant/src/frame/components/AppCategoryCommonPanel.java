@@ -21,8 +21,6 @@ public class AppCategoryCommonPanel extends JPanel {
     public AppCategoryCommonPanel(AppFrame appFrame, RestaurantDB restaurantDB, ButtonActionStatusDto buttonActionStatusDto) {
         setLayout(null);
         buttonUtils = new ButtonUtils();
-        appFrame.getClass().getName();
-
         JButton back = buttonUtils.goBack(appFrame, "appCategoryCommon");
         JButton startRandom = buttonUtils.startRandom(appFrame);
 

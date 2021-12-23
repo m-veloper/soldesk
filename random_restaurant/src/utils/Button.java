@@ -6,9 +6,7 @@ import model.ButtonActionStatusDto;
 import javax.swing.*;
 import java.util.ArrayList;
 
-public interface ButtonUtilsService {
-
-    ButtonActionStatusDto buttonActionStatusDto = new ButtonActionStatusDto();
+public interface Button {
 
     /**
      * 배경, 테두리가 없는 버튼을 설정합니다.
@@ -65,13 +63,27 @@ public interface ButtonUtilsService {
      */
     JButton goCategory(AppFrame appFrame);
 
+    /**
+     * 한식,중식,일식,양식,아시안 버튼 리스트
+     * @param appFrame
+     * @param buttonActionStatusDto
+     * @return
+     */
     ArrayList<JButton> getCountryBtn(AppFrame appFrame, ButtonActionStatusDto buttonActionStatusDto);
 
+    /**
+     * 랜덤 추천 시작 버튼
+     * @param appFrame
+     * @return
+     */
     JButton startRandom(AppFrame appFrame);
 
-    JButton korean();
-    JButton japanese();
-    JButton chinese();
-    JButton western();
-    JButton asian();
+    /**
+     * 버튼 이벤트로 작동되는 쓰레드에
+     * interrupt 를 발생시켜 중지 시키고
+     * 버튼을 재설정 하고 랜덤 결과값을 보여주는 패널로 이동 시킵니다.
+     * @param thread
+     * @param jButton
+     */
+    void interruptRandomImgTread(Thread thread, JButton jButton, AppFrame appFrame);
 }

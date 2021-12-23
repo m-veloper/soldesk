@@ -9,27 +9,24 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
-public class AppCategoryPanel extends JPanel {
+public class AppRandomResultPanel extends JPanel {
 
     private  ButtonUtils buttonUtils;
-    private  ArrayList<JButton> countryBtnList;
-
     /**
      * 생성자
      * @param appFrame
      * @param restaurantDB
      */
-    public AppCategoryPanel(AppFrame appFrame, RestaurantDB restaurantDB, ButtonActionStatusDto buttonActionStatusDto) {
+    public AppRandomResultPanel(AppFrame appFrame, RestaurantDB restaurantDB) {
         setLayout(null);
         buttonUtils = new ButtonUtils();
-        countryBtnList = buttonUtils.getCountryBtn(appFrame, buttonActionStatusDto);
-        JButton back = buttonUtils.goBack(appFrame, "appCategory");
-
+        JButton back = buttonUtils.goBack(appFrame, "appRandomResult");
+        JLabel jLabel = new JLabel();
         add(back);
-        countryBtnList.stream().forEach(s -> add(s));
+
     }
+
 
     /**
      * 패널 배경 이미지 넣기

@@ -1,5 +1,6 @@
 package frame.components;
 
+import constant.Country;
 import frame.AppFrame;
 import model.RestaurantDto;
 import service.Restaurant;
@@ -11,8 +12,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.*;
+import java.util.List;
 import java.util.Timer;
-import java.util.TimerTask;
 
 public class AppRandomPanel extends JPanel {
 
@@ -40,15 +42,15 @@ public class AppRandomPanel extends JPanel {
         resultArea.setBackground(Color.cyan);
 
         foodImage = new JLabel("");
-        Image image = new ImageIcon("./random_restaurant/resources/img/food/korean_food.png").getImage();
-        ImageIcon imageIcon = new ImageIcon(image.getScaledInstance(200, 200, Image.SCALE_SMOOTH));
-        foodImage.setIcon(imageIcon);
-        foodImage.setBounds(150, 300, 200, 200);
+//        Image image = new ImageIcon("./random_restaurant/resources/img/food/korean_food.png").getImage();
+//        ImageIcon imageIcon = new ImageIcon(image.getScaledInstance(500, 500, Image.SCALE_SMOOTH));
+        foodImage.setIcon(new ImageIcon("./random_restaurant/resources/img/food/korean_food.png"));
+        foodImage.setBounds(100, 200, 200, 200);
         add(foodImage);
 
         add(back);
         add(startRandom);
-        add(resultArea);
+//        add(resultArea);
 
         back.addActionListener(new ActionListener() {
             @Override
@@ -67,7 +69,9 @@ public class AppRandomPanel extends JPanel {
                 //쓰레드
                 ImgThread imgThread = new ImgThread();
                 imgThread.start();
-                ScheduleUtils.interruptThread(imgThread);
+                startRandom.setEnabled(false);
+                startRandom.setVisible(false);
+                buttonUtils.interruptRandomImgTread(imgThread, startRandom, appFrame);
             }
         });
     }
@@ -87,27 +91,20 @@ public class AppRandomPanel extends JPanel {
 
     class ImgThread extends Thread {
 
-        String[] imgs = {
-                "./random_restaurant/resources/img/food/chinese_food.png",
-                "./random_restaurant/resources/img/food/korean_food.png",
-                "./random_restaurant/resources/img/food/japanese_food.png",
-                "./random_restaurant/resources/img/food/western_food.png",
-                "./random_restaurant/resources/img/food/asian_food.png"
-        };
+        public ArrayList<String> getImgList() {
+            ArrayList<String> imgList = new ArrayList<>();
+            Country.getCountry().stream().forEach(s -> imgList.add(s.get("foodImgPath")));
+            return imgList;
+        }
 
         @Override
         public void run() {
-
             try {
                 while (!Thread.currentThread().isInterrupted()) {
-                    for (int i = 0; i < imgs.length; i++) {
-//                        System.out.println(i);
+                    for (int i = 0; i < this.getImgList().size(); i++) {
                         Thread.sleep(100);
-                        ImageIcon icon = new ImageIcon(imgs[i]);
+                        ImageIcon icon = new ImageIcon(this.getImgList().get(i));
                         foodImage.setIcon(icon);
-
-                        ImageIcon imageIcon = new ImageIcon(image.getScaledInstance(200, 200, Image.SCALE_SMOOTH));
-                        foodImage.setIcon(imageIcon);
                     }
                 }
             } catch (InterruptedException e) {
