@@ -11,12 +11,13 @@ public class RestaurantDto {
     private String roadAddressName;
     private String placeUrl;
     private String id;
+    private String imgUrl;
 
     public RestaurantDto(){
 
     }
 
-    public RestaurantDto(String placeName, String categoryName, String categoryDetail, String phone, String addressName, String placeBest, String roadAddressName, String placeUrl, String id) {
+    public RestaurantDto(String placeName, String categoryName, String categoryDetail, String phone, String addressName, String placeBest, String roadAddressName, String placeUrl, String id, String imgUrl) {
         this.placeName = placeName;
         this.categoryName = categoryName;
         this.categoryDetail = categoryDetail;
@@ -26,6 +27,7 @@ public class RestaurantDto {
         this.roadAddressName = roadAddressName;
         this.placeUrl = placeUrl;
         this.id = id;
+        this.imgUrl = imgUrl;
     }
 
     public String getPlaceName() {
@@ -100,5 +102,12 @@ public class RestaurantDto {
         this.id = id;
     }
 
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
 }
 

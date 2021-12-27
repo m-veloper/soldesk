@@ -8,6 +8,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -71,11 +74,13 @@ public class ButtonUtils implements Button {
         JButton back = this.setTransparencyButton("goBack", "./random_restaurant/resources/img/back.png", 50, 100, 80, 20);
         back.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                System.out.println(fromPanel);
                 switch (fromPanel) {
                     case "appMain":
                         appFrame.getCardLayout().show(appFrame.getContentPane(), "appStart");
                         break;
                     case "appRandom":
+                    case "appCategory":
                         appFrame.getCardLayout().show(appFrame.getContentPane(), "appMain");
                         break;
                     case "appCategoryCommon":
@@ -165,5 +170,20 @@ public class ButtonUtils implements Button {
         timer.schedule(timerTask, 5000);
     }
 
-
+    @Override
+    public JButton openBrowser(String url) {
+        JButton jButton = this.setTransparencyButton("openBrowser", "./random_restaurant/resources/img/start.png", 80, 550, 230, 50);
+        jButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    Desktop.getDesktop().browse(new URI(url));
+                } catch (IOException ioException) {
+                    ioException.printStackTrace();
+                } catch (URISyntaxException uriSyntaxException) {
+                    uriSyntaxException.printStackTrace();
+                }
+            }
+        });
+        return jButton;
+    }
 }

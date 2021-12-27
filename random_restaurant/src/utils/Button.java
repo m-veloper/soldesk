@@ -86,4 +86,11 @@ public interface Button {
      * @param jButton
      */
     void interruptRandomImgTread(Thread thread, JButton jButton, AppFrame appFrame);
+
+    /**
+     * 카카오맵 브라우져 호출
+     * @param url
+     * @return
+     */
+    JButton openBrowser(String url);
 }

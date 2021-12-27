@@ -35,7 +35,7 @@ public class AppFrame extends JFrame {
         getContentPane().add(Panels.APP_BASE.getValue(), new AppBasePanel(this));
         getContentPane().add(Panels.APP_START.getValue(), new AppStartPanel(this));
         getContentPane().add(Panels.APP_MAIN.getValue(), new AppMainPanel(this));
-        getContentPane().add(Panels.APP_RANDOM.getValue(), new AppRandomPanel(this, restaurantDB));
+        getContentPane().add(Panels.APP_RANDOM.getValue(), new AppRandomPanel(this));
         getContentPane().add(Panels.APP_CATEGORY.getValue(), new AppCategoryPanel(this, restaurantDB, buttonActionStatusDto));
         getContentPane().add(Panels.APP_CATEGORY_COMMON.getValue(), new AppCategoryCommonPanel(this, restaurantDB, buttonActionStatusDto));
         getContentPane().add(Panels.APP_RANDOM_RESULT.getValue(), new AppRandomResultPanel(this, restaurantDB));

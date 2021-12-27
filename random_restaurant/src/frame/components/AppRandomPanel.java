@@ -2,24 +2,17 @@ package frame.components;
 
 import constant.Country;
 import frame.AppFrame;
-import model.RestaurantDto;
 import service.Restaurant;
-import service.RestaurantDB;
 import utils.ButtonUtils;
-import utils.ScheduleUtils;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.*;
-import java.util.List;
-import java.util.Timer;
+import java.util.ArrayList;
 
 public class AppRandomPanel extends JPanel {
 
-    private RestaurantDto restaurantDto;
-    private Restaurant restaurant;
     private ButtonUtils buttonUtils;
     JLabel foodImage;
 
@@ -27,11 +20,9 @@ public class AppRandomPanel extends JPanel {
      * 생성자
      *
      * @param appFrame
-     * @param restaurantDB
      */
-    public AppRandomPanel(AppFrame appFrame, RestaurantDB restaurantDB) {
+    public AppRandomPanel(AppFrame appFrame) {
         setLayout(null);
-        restaurant = new Restaurant();
         buttonUtils = new ButtonUtils();
 
         JButton back = buttonUtils.goBack(appFrame, "appRandom");
@@ -42,31 +33,17 @@ public class AppRandomPanel extends JPanel {
         resultArea.setBackground(Color.cyan);
 
         foodImage = new JLabel("");
-//        Image image = new ImageIcon("./random_restaurant/resources/img/food/korean_food.png").getImage();
-//        ImageIcon imageIcon = new ImageIcon(image.getScaledInstance(500, 500, Image.SCALE_SMOOTH));
         foodImage.setIcon(new ImageIcon("./random_restaurant/resources/img/food/korean_food.png"));
         foodImage.setBounds(100, 200, 200, 200);
-        add(foodImage);
 
+        add(foodImage);
         add(back);
         add(startRandom);
-//        add(resultArea);
-
-        back.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                resultArea.setText("");
-                appFrame.getCardLayout().show(appFrame.getContentPane(), "appMain");
-            }
-        });
 
         startRandom.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-//                restaurantDto = restaurant.getRandomRestaurant(restaurantDB);
-//                resultArea.setText(restaurantDto.getPlaceName());
-
-                //쓰레드
+                // 쓰레드 시작
                 ImgThread imgThread = new ImgThread();
                 imgThread.start();
                 startRandom.setEnabled(false);
@@ -89,6 +66,9 @@ public class AppRandomPanel extends JPanel {
     }
 
 
+    /**
+     * Thread 로 음식 이미지를 보여줍니다.
+     */
     class ImgThread extends Thread {
 
         public ArrayList<String> getImgList() {
@@ -109,9 +89,6 @@ public class AppRandomPanel extends JPanel {
                 }
             } catch (InterruptedException e) {
                 e.printStackTrace();
-            } finally {
-                // 공유자원 정리
-                // 해당 스레드에서 사용한 메모리 자원 정리(close 같은 작업들)
             }
         }
     }
