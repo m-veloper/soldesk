@@ -28,7 +28,7 @@ public class ButtonUtils implements Button {
     @Override
     public JButton setTransparencyButton(String btnName, String imgPath, int x, int y, int width, int height) {
         JButton jButton = new JButton();
-        if (imgPath != null) {
+        if (!imgPath.isEmpty()) {
             Image image = new ImageIcon(imgPath).getImage();
             ImageIcon imageIcon = new ImageIcon(image.getScaledInstance(width, height, Image.SCALE_SMOOTH));
             jButton.setIcon(imageIcon);
@@ -91,7 +91,7 @@ public class ButtonUtils implements Button {
                         break;
                     case APP_RANDOM_RESULT:
                         // status 값이 따라 패널들의 설정을 다르게 보여줌
-                        if (status != null){
+                        if (!status.isEmpty()){
                             appFrame.add(APP_RANDOM.getValue(), new AppRandomPanel(appFrame, status));
                             appFrame.getCardLayout().show(appFrame.getContentPane(), APP_RANDOM.getValue());
                         }
