@@ -3,11 +3,8 @@ package utils;
 import javax.swing.*;
 
 public interface Frame {
-
-
-    JFrame setBackgroundImg(JFrame jFrame);
     /**
-     * �⺻ ������ ������ �����մϴ�.
+     * 프레임 기본 설정
      * @param jFrame
      * @return
      */

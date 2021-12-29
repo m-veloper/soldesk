@@ -18,148 +18,148 @@ public class RestaurantDB {
 
         restaurantDtos = new ArrayList<>();
 
-        restaurantDtos.add(new RestaurantDto("»ş¿À¹Ù¿À¿ìÀ°¸é", "Áß½Ä", "ÁßÈ­¿ä¸®", "02-723-7788",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 12-24", "¿ìÀ°¸é, ¸¶¶óÅÁ¸é", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î17±æ 15", "http://place.map.kakao.com/2053098478",
+        restaurantDtos.add(new RestaurantDto("ìƒ¤ì˜¤ë°”ì˜¤ìš°ìœ¡ë©´", "CHINESE", "ì¤‘í™”ìš”ë¦¬", "02-723-7788",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 12-24", "ìš°ìœ¡ë©´, ë§ˆë¼íƒ•ë©´", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ17ê¸¸ 15", "http://place.map.kakao.com/2053098478",
                 "2053098478","https://mblogthumb-phinf.pstatic.net/MjAxOTAxMjdfMjg2/MDAxNTQ4NTc3NTE3ODA3.jyQh1Fb1ZaDOve3moocv4hNA1KRZZ5xqVtm6VKc72bAg.dv325fcLyIGnIgE_Va8Sn2RKWG2Omr6QgMN4n-4zcr4g.JPEG.tjgmlek86/20190123123624_IMG_2498-01-01.jpeg?type=w800"));
 
-        restaurantDtos.add(new RestaurantDto("¿ìÀ°¸é°ü", "Áß½Ä", "ÁßÈ­¿ä¸®", "070-4213-5678",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 11-11", "¿ìÀ°¸é(Æ¯), ¿ìÀ°¸é", "¼­¿ï Á¾·Î±¸ Ã»°èÃµ·Î 75-2", "http://place.map.kakao.com/2143988257",
+        restaurantDtos.add(new RestaurantDto("ìš°ìœ¡ë©´ê´€", "CHINESE", "ì¤‘í™”ìš”ë¦¬", "070-4213-5678",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 11-11", "ìš°ìœ¡ë©´(íŠ¹), ìš°ìœ¡ë©´", "ì„œìš¸ ì¢…ë¡œêµ¬ ì²­ê³„ì²œë¡œ 75-2", "http://place.map.kakao.com/2143988257",
                 "2143988257","https://img.siksinhot.com/place/1605152744017465.PNG?w=307&h=300&c=Y"));
 
-        restaurantDtos.add(new RestaurantDto("°«µ§½º½Ã", "ÀÏ½Ä", "ÃÊ¹ä,·Ñ", "02-730-1477",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 19-1", "Á¡½É Æ¯¼± ÃÊ¹ä, È¸ÀüÃÊ¹ä", "¼­¿ï Á¾·Î±¸ Á¾·Î12±æ 14", "http://place.map.kakao.com/15204021",
+        restaurantDtos.add(new RestaurantDto("ê°“ë´ìŠ¤ì‹œ", "JAPANESE", "ì´ˆë°¥,ë¡¤", "02-730-1477",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 19-1", "ì ì‹¬ íŠ¹ì„  ì´ˆë°¥, íšŒì „ì´ˆë°¥", "ì„œìš¸ ì¢…ë¡œêµ¬ ì¢…ë¡œ12ê¸¸ 14", "http://place.map.kakao.com/15204021",
                 "15204021","https://media-cdn.tripadvisor.com/media/photo-s/12/05/3d/a2/caption.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("¾ç¿¬È­·Î", "ÇÑ½Ä", "À°·ù,°í±â", "02-3210-0808",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 13-5", "»ï°ã»ì, Æ¯¸ñ»ì, °¡ºê¸®»ì", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î17±æ 18", "http://place.map.kakao.com/1619274444",
+        restaurantDtos.add(new RestaurantDto("ì–‘ì—°í™”ë¡œ", "KOREAN", "ìœ¡ë¥˜,ê³ ê¸°", "02-3210-0808",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 13-5", "ì‚¼ê²¹ì‚´, íŠ¹ëª©ì‚´, ê°€ë¸Œë¦¬ì‚´", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ17ê¸¸ 18", "http://place.map.kakao.com/1619274444",
                 "1619274444","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTbDQhKh4uMunnB4EE5kH6Lu1OF4YpRJywpA&usqp=CAU"));
 
-        restaurantDtos.add(new RestaurantDto("½Åµµ¼¼±â", "ÇÑ½Ä", "À°·ù,°í±â", "02-739-8114",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 180", "SGP Åë»ğ°ã, SGP¼ñ´õ·¢", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î17±æ 51", "http://place.map.kakao.com/811272424",
+        restaurantDtos.add(new RestaurantDto("ì‹ ë„ì„¸ê¸°", "KOREAN", "ìœ¡ë¥˜,ê³ ê¸°", "02-739-8114",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 180", "SGP í†µì‚½ê²¹, SGPìˆ„ë”ë™", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ17ê¸¸ 51", "http://place.map.kakao.com/811272424",
                 "811272424","http://www.seoulwire.com/news/photo/201807/19120_14600_5630.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("·Ñ¸µÆÄ½ºÅ¸", "¾ç½Ä", "ÀÌÅ»¸®¾È", "02-2261-5973",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 5-5", "Å©¸² ¼öÇÁ ÆÄ½ºÅ¸, ¸Å¿î Å©¸² ÆÄ½ºÅ¸", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î 392", "http://place.map.kakao.com/829236335",
+        restaurantDtos.add(new RestaurantDto("ë¡¤ë§íŒŒìŠ¤íƒ€", "WESTERN", "ì´íƒˆë¦¬ì•ˆ", "02-2261-5973",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 5-5", "í¬ë¦¼ ìˆ˜í”„ íŒŒìŠ¤íƒ€, ë§¤ìš´ í¬ë¦¼ íŒŒìŠ¤íƒ€", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ 392", "http://place.map.kakao.com/829236335",
                 "829236335","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0w6gPHp_Q-I-qQf0zEulEOUmG5KK6zRmygzgNGx7aR-lHlLi_V1QNQsZtgW2MomVo3vk&usqp=CAU"));
 
-        restaurantDtos.add(new RestaurantDto("Á¾·Îµ·ºÎ¸®", "ÀÏ½Ä", "µ·ºÎ¸®", "02-722-2384",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 7-15", "°¡Ã÷µ¿, ¹Í½º°¡Ã÷µ¿, ±Ôµ¿", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î 385", "http://place.map.kakao.com/24725107",
+        restaurantDtos.add(new RestaurantDto("ì¢…ë¡œëˆë¶€ë¦¬", "JAPANESE", "ëˆë¶€ë¦¬", "02-722-2384",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 7-15", "ê°€ì¸ ë™, ë¯¹ìŠ¤ê°€ì¸ ë™, ê·œë™", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ 385", "http://place.map.kakao.com/24725107",
                 "24725107","https://mp-seoul-image-production-s3.mangoplate.com/added_restaurants/459460_1498928329342661.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("VIPÂüÄ¡", "ÀÏ½Ä", "ÂüÄ¡È¸", "02-720-3888",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 11-13", "Á¡½ÉÆ¯¼± ÂüÄ¡ Á¤½Ä", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î15±æ 25", "http://place.map.kakao.com/149543887",
+        restaurantDtos.add(new RestaurantDto("VIPì°¸ì¹˜", "JAPANESE", "ì°¸ì¹˜íšŒ", "02-720-3888",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 11-13", "ì ì‹¬íŠ¹ì„  ì°¸ì¹˜ ì •ì‹", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ15ê¸¸ 25", "http://place.map.kakao.com/149543887",
                 "149543887","https://ssproxy.ucloudbiz.olleh.com/v1/AUTH_e59809eb-bdc9-44d7-9d8f-2e7f0e47ba91/post_card/67041_1592286979_uZtHVD65.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("È²¼Ò°íÁı", "ÇÑ½Ä", "À°·ù,°í±â", "02-722-5747",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 11-11", "°íÃßÀå ºÒ°í±â ¹é¹İ", "¼­¿ï Á¾·Î±¸ Ã»°èÃµ·Î 75-1", "http://place.map.kakao.com/8696442",
+        restaurantDtos.add(new RestaurantDto("í™©ì†Œê³ ì§‘", "KOREAN", "ìœ¡ë¥˜,ê³ ê¸°", "02-722-5747",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 11-11", "ê³ ì¶”ì¥ ë¶ˆê³ ê¸° ë°±ë°˜", "ì„œìš¸ ì¢…ë¡œêµ¬ ì²­ê³„ì²œë¡œ 75-1", "http://place.map.kakao.com/8696442",
                 "8696442","https://img.siksinhot.com/place/1508728090055419.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("Àï¹İÁı8292", "ÇÑ½Ä", "À°·ù,°í±â", "0507-1389-8384",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 43-13", "°í±âÁ¤½Ä, µÎ·çÄ¡±â", "¼­¿ï Á¾·Î±¸ Á¾·Î8±æ 17", "http://place.map.kakao.com/735673283",
+        restaurantDtos.add(new RestaurantDto("ìŸë°˜ì§‘8292", "KOREAN", "ìœ¡ë¥˜,ê³ ê¸°", "0507-1389-8384",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 43-13", "ê³ ê¸°ì •ì‹, ë‘ë£¨ì¹˜ê¸°", "ì„œìš¸ ì¢…ë¡œêµ¬ ì¢…ë¡œ8ê¸¸ 17", "http://place.map.kakao.com/735673283",
                 "735673283","https://mblogthumb-phinf.pstatic.net/MjAyMDA5MjNfMTYg/MDAxNjAwODMzNTI1NzIz.FBvpIkAm8uopIJL-kKCXt3Dg03RSBmurjJ2DEtXZxu8g.7Ugue12BSZdKVLD2X2K_OM7CypMwMHMGtn5A0Cf9Kb8g.JPEG.lin1210/IMG_9661.JPG?type=w800"));
 
-        restaurantDtos.add(new RestaurantDto("¼÷´ŞµÅÁö", "ÇÑ½Ä", "À°·ù,°í±â", "02-737-5201",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 43-15", "±¹³»»ê ¼÷¼º Åë»ï°ã, ºÎ´ëÂî°³", "¼­¿ï Á¾·Î±¸ Á¾·Î8±æ 15", "http://place.map.kakao.com/650374759",
+        restaurantDtos.add(new RestaurantDto("ìˆ™ë‹¬ë¼ì§€", "KOREAN", "ìœ¡ë¥˜,ê³ ê¸°", "02-737-5201",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 43-15", "êµ­ë‚´ì‚° ìˆ™ì„± í†µì‚¼ê²¹, ë¶€ëŒ€ì°Œê°œ", "ì„œìš¸ ì¢…ë¡œêµ¬ ì¢…ë¡œ8ê¸¸ 15", "http://place.map.kakao.com/650374759",
                 "650374759","https://cdn.imweb.me/thumbnail/20200513/480e99982a163.png"));
 
-        restaurantDtos.add(new RestaurantDto("³²´ë¹®¸·³»È¸Áı", "ÇÑ½Ä", "ÇØ¹°»ı¼±È¸", "02-737-5115",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 263", "È°¾îÈ¸", "¼­¿ï Á¾·Î±¸ ¿ìÁ¤±¹·Î 4-1", "http://place.map.kakao.com/13272050",
+        restaurantDtos.add(new RestaurantDto("ë‚¨ëŒ€ë¬¸ë§‰ë‚´íšŒì§‘", "KOREAN", "í•´ë¬¼ìƒì„ íšŒ", "02-737-5115",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 263", "í™œì–´íšŒ", "ì„œìš¸ ì¢…ë¡œêµ¬ ìš°ì •êµ­ë¡œ 4-1", "http://place.map.kakao.com/13272050",
                 "13272050","https://mblogthumb-phinf.pstatic.net/20160601_249/bbi_yu_1464745684610p3cSv_PNG/tyle.io-CRpDviQwP8k8sZEJM-1_%2814%29.png?type=w800"));
 
-        restaurantDtos.add(new RestaurantDto("Á¾·ÎºÒµÅÁö", "ÇÑ½Ä", "À°·ù°í±â", "02-734-1190",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 155", "°£µÅÁö, ºÒµÅÁö", "¼­¿ï Á¾·Î±¸ Ã»°èÃµ·Î 67", "http://place.map.kakao.com/17278908",
+        restaurantDtos.add(new RestaurantDto("ì¢…ë¡œë¶ˆë¼ì§€", "KOREAN", "ìœ¡ë¥˜ê³ ê¸°", "02-734-1190",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 155", "ê°„ë¼ì§€, ë¶ˆë¼ì§€", "ì„œìš¸ ì¢…ë¡œêµ¬ ì²­ê³„ì²œë¡œ 67", "http://place.map.kakao.com/17278908",
                 "17278908","https://www.chadorri.com/wp-content/uploads/2013/08/20130812_127.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("¸£ºê¿Í", "¾ç½Ä", "ÀÌÅ»¸®¾È", "02-739-8208",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 19-11", "ÆÄ½ºÅ¸, ¸®Á¶¶Ç, È­´öÇÇÀÚ", "¼­¿ï Á¾·Î±¸ ¿ìÁ¤±¹·Î2±æ 42", "http://place.map.kakao.com/18283622",
+        restaurantDtos.add(new RestaurantDto("ë¥´ë¸Œì™€", "WESTERN", "ì´íƒˆë¦¬ì•ˆ", "02-739-8208",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 19-11", "íŒŒìŠ¤íƒ€, ë¦¬ì¡°ë˜, í™”ë•í”¼ì", "ì„œìš¸ ì¢…ë¡œêµ¬ ìš°ì •êµ­ë¡œ2ê¸¸ 42", "http://place.map.kakao.com/18283622",
                 "18283622","https://media-cdn.tripadvisor.com/media/photo-s/1a/a9/94/45/caption.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("Æ÷Å»¶ó·¹½ºÅä¶û", "¾Æ½Ã¾ÆÀ½½Ä", "ÀÎµµÀ½½Ä", "02-318-0094",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 35-2", "Ä«·¹, ½ºÇÁ, ±¹¼ö", "¼­¿ï Á¾·Î±¸ Ã»°èÃµ·Î 99", "http://place.map.kakao.com/11834063",
+        restaurantDtos.add(new RestaurantDto("í¬íƒˆë¼ë ˆìŠ¤í† ë‘", "ASIAN", "ì¸ë„ìŒì‹", "02-318-0094",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 35-2", "ì¹´ë ˆ, ìŠ¤í”„, êµ­ìˆ˜", "ì„œìš¸ ì¢…ë¡œêµ¬ ì²­ê³„ì²œë¡œ 99", "http://place.map.kakao.com/11834063",
                 "11834063","https://modo-phinf.pstatic.net/20181201_136/1543648648445496se_JPEG/mosazRWPN5.jpeg?type=a1100"));
 
-        restaurantDtos.add(new RestaurantDto("¶Ò¹è±âÁı", "ÇÑ½Ä", "Âî°³Àü°ñ", "02-2265-5744",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 5-1", "¿ì··µÈÀå, µÈÀåÂî°³, ¼øµÎºÎ", "¼­¿ï Á¾·Î±¸ Á¾·Î16±æ 12", "http://place.map.kakao.com/10374336",
+        restaurantDtos.add(new RestaurantDto("ëšë°°ê¸°ì§‘", "KOREAN", "ì°Œê°œì „ê³¨", "02-2265-5744",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 5-1", "ìš°ë ëœì¥, ëœì¥ì°Œê°œ, ìˆœë‘ë¶€", "ì„œìš¸ ì¢…ë¡œêµ¬ ì¢…ë¡œ16ê¸¸ 12", "http://place.map.kakao.com/10374336",
                 "10374336","https://mblogthumb-phinf.pstatic.net/MjAxODA1MjlfMjcy/MDAxNTI3NTUyOTA0MTA2.5-hNYc39kEPiiyJqd_yws_bXucW8eutfvf4sqQwzQa0g.3ZzwYW4hl4ysIGA0hbMQ9cOmCcm5NdGDWfaEdbue0lUg.JPEG.sherinks/20180527_185701.jpg?type=w800"));
 
-        restaurantDtos.add(new RestaurantDto("´õÇÇÀÚÇÊ", "¾ç½Ä", "ÇÇÀÚ", "02-795-3283",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 42-4", "¸¶¸£°Ô¸®µû, ÆäÆä·Î´Ï, ½´ÇÁ¸²", "¼­¿ï Á¾·Î±¸ Á¾·Î10±æ 21", "http://place.map.kakao.com/1397192634",
+        restaurantDtos.add(new RestaurantDto("ë”í”¼ìí•„", "WESTERN", "í”¼ì", "02-795-3283",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 42-4", "ë§ˆë¥´ê²Œë¦¬ë”°, í˜í˜ë¡œë‹ˆ, ìŠˆí”„ë¦¼", "ì„œìš¸ ì¢…ë¡œêµ¬ ì¢…ë¡œ10ê¸¸ 21", "http://place.map.kakao.com/1397192634",
                 "1397192634","http://www.seoulwire.com/news/photo/201810/31169_25058_17.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("Àå¼öÃÌ", "ÇÑ½Ä", "ÇØ¹°»ı¼±Àå¾î", "02-722-3149",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 7-5", "Àå¾î ¼Ò±İ ±¸ÀÌ, ¹ÙÁö¶ôÄ®±¹¼ö", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î17±æ 8", "http://place.map.kakao.com/221545425",
+        restaurantDtos.add(new RestaurantDto("ì¥ìˆ˜ì´Œ", "KOREAN", "í•´ë¬¼ìƒì„ ì¥ì–´", "02-722-3149",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 7-5", "ì¥ì–´ ì†Œê¸ˆ êµ¬ì´, ë°”ì§€ë½ì¹¼êµ­ìˆ˜", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ17ê¸¸ 8", "http://place.map.kakao.com/221545425",
                 "221545425","https://t1.daumcdn.net/cfile/tistory/994E93345BFF35F733"));
 
-        restaurantDtos.add(new RestaurantDto("½ÅÃÌÈ²¼Ò°öÃ¢", "ÇÑ½Ä", "°öÃ¢¸·Ã¢", "02-735-6698",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 12-23", "È²¼Ò°öÃ¢, ´ëÃ¢, ¸·Ã¢", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î17±æ 17", "http://place.map.kakao.com/9631798",
+        restaurantDtos.add(new RestaurantDto("ì‹ ì´Œí™©ì†Œê³±ì°½", "KOREAN", "ê³±ì°½ë§‰ì°½", "02-735-6698",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 12-23", "í™©ì†Œê³±ì°½, ëŒ€ì°½, ë§‰ì°½", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ17ê¸¸ 17", "http://place.map.kakao.com/9631798",
                 "9631798","https://mblogthumb-phinf.pstatic.net/MjAxNzExMTlfMTUg/MDAxNTExMDIwMjk0NDQ1.KM9dSD3E9Y3CT_Kjn1tdeRsDi-pQ4v89YPQYurjOaecg.uQf8IItml3XGLaB6HTJ-TvV5KKb66-ZTVSgWZGKEc6wg.JPEG.h00000n/IMG_5015.JPG?type=w800"));
 
-        restaurantDtos.add(new RestaurantDto("¹İÄïÄä", "¾Æ½Ã¾ÆÀ½½Ä", "ÅÂ±¹À½½Ä", "02-725-1688",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 43-7", "ÅÂ±¹½Ä ¼Ò°í±â ½Ò±¹¼ö, Ä«¿ÀÆÌ", "¼­¿ï Á¾·Î±¸ Á¾·Î10±æ 20", "http://place.map.kakao.com/208592301",
+        restaurantDtos.add(new RestaurantDto("ë°˜ì¿¤ì½´", "ASIAN", "íƒœêµ­ìŒì‹", "02-725-1688",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 43-7", "íƒœêµ­ì‹ ì†Œê³ ê¸° ìŒ€êµ­ìˆ˜, ì¹´ì˜¤íŒŸ", "ì„œìš¸ ì¢…ë¡œêµ¬ ì¢…ë¡œ10ê¸¸ 20", "http://place.map.kakao.com/208592301",
                 "208592301","https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/20180219014039886_photo0_087b3dd4c395.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("¹Ìµµ°¥ºñ", "ÇÑ½Ä", "À°·ù°í±â", "02-725-9233",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 11-13", "°íº£¸ğµë, ¿À°ã»ì", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î15±æ 25", "http://place.map.kakao.com/1969790364",
+        restaurantDtos.add(new RestaurantDto("ë¯¸ë„ê°ˆë¹„", "KOREAN", "ìœ¡ë¥˜ê³ ê¸°", "02-725-9233",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 11-13", "ê³ ë² ëª¨ë“¬, ì˜¤ê²¹ì‚´", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ15ê¸¸ 25", "http://place.map.kakao.com/1969790364",
                 "1969790364","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROHOQfJlJmOFXw1OAa8ucN8z1Zso_jbUTaEw&usqp=CAU"));
 
-        restaurantDtos.add(new RestaurantDto("¹ÌÄ£´ß", "ÇÑ½Ä", "Ä¡Å²", "02-722-9992",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 44-1", "¹ÌÄ£Åë½Ó´Ú, ¼ø»ìÄŞº¸", "¼­¿ï Á¾·Î±¸ ¿ìÁ¤±¹·Î2±æ 16", "http://place.map.kakao.com/26884480",
+        restaurantDtos.add(new RestaurantDto("ë¯¸ì¹œë‹­", "KOREAN", "ì¹˜í‚¨", "02-722-9992",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 44-1", "ë¯¸ì¹œí†µìŒˆë‹¥, ìˆœì‚´ì½¤ë³´", "ì„œìš¸ ì¢…ë¡œêµ¬ ìš°ì •êµ­ë¡œ2ê¸¸ 16", "http://place.map.kakao.com/26884480",
                 "26884480","https://mblogthumb-phinf.pstatic.net/MjAxNzA1MTZfMzIg/MDAxNDk0OTIzNTY5NDMz.NuPqvJEoe-JDJO3B1bvyfE-eCeGsWots9uXkLkeGJc4g.-sQLWWJiCzzFWtCGJCYFnwQeoKRc6ML3rgP5ohQwVR8g.JPEG.22woom/KakaoTalk_20170516_172037615%EC%A2%85%EB%A1%9C%EB%A7%9B%EC%A7%91%EC%A2%85%EB%A1%9C%EB%AF%B8%EC%B9%9C%EB%8B%AD_%EC%A2%85%EA%B0%81%EB%A7%9B%EC%A7%91%EC%A2%85%EA%B0%81%EC%97%AD%EB%A7%9B%EC%A7%91_%EC%A2%85%EB%A1%9C%EC%B9%98%ED%82%A8%EC%A7%91_%EC%A2%85.jpg?type=w800"));
 
-        restaurantDtos.add(new RestaurantDto("¿øÁ¶¿ìÁ¤³«Áö", "ÇÑ½Ä", "ÇØ¹°»ı¼±", "02-720-7991",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 19-16", "³¬ÁöººÀ½, °¨ÀÚÅÁ", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î17±æ 46", "http://place.map.kakao.com/8458646",
+        restaurantDtos.add(new RestaurantDto("ì›ì¡°ìš°ì •ë‚™ì§€", "KOREAN", "í•´ë¬¼ìƒì„ ", "02-720-7991",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 19-16", "ë‚šì§€ë³¶ìŒ, ê°ìíƒ•", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ17ê¸¸ 46", "http://place.map.kakao.com/8458646",
                 "8458646","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGfiQVRuEvdbUPddu28qWm4tCXql57VCcs7w&usqp=CAU"));
 
-        restaurantDtos.add(new RestaurantDto("´ëÂùÈ½Áı", "ÇÑ½Ä", "ÇØ¹°»ı¼±È¸", "02-738-8588",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 256", "¸ğµëÈ¸, È°¾îÈ¸", "¼­¿ï Á¾·Î±¸ ¿ìÁ¤±¹·Î2±æ 10", "http://place.map.kakao.com/27491757",
+        restaurantDtos.add(new RestaurantDto("ëŒ€ì°¬íšŸì§‘", "KOREAN", "í•´ë¬¼ìƒì„ íšŒ", "02-738-8588",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 256", "ëª¨ë“¬íšŒ, í™œì–´íšŒ", "ì„œìš¸ ì¢…ë¡œêµ¬ ìš°ì •êµ­ë¡œ2ê¸¸ 10", "http://place.map.kakao.com/27491757",
                 "27491757","https://t1.daumcdn.net/cfile/tistory/993DAF415E108D5C0A"));
 
-        restaurantDtos.add(new RestaurantDto("±³´ëÀÌÃşÁı", "ÇÑ½Ä", "À°·ù°í±â", "02-732-8188",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 14-1", "Åë»ï°ã, Åë¸ñ»ì", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î19±æ 16", "http://place.map.kakao.com/170372666",
+        restaurantDtos.add(new RestaurantDto("êµëŒ€ì´ì¸µì§‘", "KOREAN", "ìœ¡ë¥˜ê³ ê¸°", "02-732-8188",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 14-1", "í†µì‚¼ê²¹, í†µëª©ì‚´", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ19ê¸¸ 16", "http://place.map.kakao.com/170372666",
                 "170372666","https://mp-seoul-image-production-s3.mangoplate.com/added_restaurants/707338_1492362614652656.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("ÀÏÆíµî½É", "ÇÑ½Ä", "À°·ù°í±â", "070-4104-9922",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 180", "ÇÑ¿ì ´«²É µî½É, ¾È½É", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î17±æ 51", "http://place.map.kakao.com/916261841",
+        restaurantDtos.add(new RestaurantDto("ì¼í¸ë“±ì‹¬", "KOREAN", "ìœ¡ë¥˜ê³ ê¸°", "070-4104-9922",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 180", "í•œìš° ëˆˆê½ƒ ë“±ì‹¬, ì•ˆì‹¬", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ17ê¸¸ 51", "http://place.map.kakao.com/916261841",
                 "916261841","https://static.hubzum.zumst.com/hubzum/2020/11/12/09/06cfa004abc84093ab683f5ce7b5bd45.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("Á¾·Î¾ç²¿Ä¡", "Áß½Ä", "¾ç²¿Ä¡", "02-720-8168",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 13-7", "¾ç¸ğµë, °í±Ş¾ç°¥ºñ", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î17±æ 20-2", "http://place.map.kakao.com/15864091",
+        restaurantDtos.add(new RestaurantDto("ì¢…ë¡œì–‘ê¼¬ì¹˜", "CHINESE", "ì–‘ê¼¬ì¹˜", "02-720-8168",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 13-7", "ì–‘ëª¨ë“¬, ê³ ê¸‰ì–‘ê°ˆë¹„", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ17ê¸¸ 20-2", "http://place.map.kakao.com/15864091",
                 "15864091","http://cdn.ksilbo.co.kr/news/photo/201904/691501_364918_269.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("´ç»ê¿Àµ¹", "ÇÑ½Ä", "À°·ù°í±â", "02-723-3590",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 44-5", "²¿µé»ì, ´«²É°¥ºñ", "¼­¿ï Á¾·Î±¸ Á¾·Î8±æ 20", "http://place.map.kakao.com/3678525",
+        restaurantDtos.add(new RestaurantDto("ë‹¹ì‚°ì˜¤ëŒ", "KOREAN", "ìœ¡ë¥˜ê³ ê¸°", "02-723-3590",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 44-5", "ê¼¬ë“¤ì‚´, ëˆˆê½ƒê°ˆë¹„", "ì„œìš¸ ì¢…ë¡œêµ¬ ì¢…ë¡œ8ê¸¸ 20", "http://place.map.kakao.com/3678525",
                 "3678525","https://emmaru.com/matzip/include/pics/2020/01/21/m_19852O213741_7.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("¿À·ÎÁö¶ó¸à", "ÀÏ½Ä", "ÀÏº»½Ä¶ó¸é", "02-733-9279",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 13-2", "µ·ÄÚÃ÷¶ó¸à, ¿À·ÎÁö¶ó¸à", "¼­¿ï Á¾·Î±¸ Á¾·Î14±æ 16", "http://place.map.kakao.com/1414375847",
+        restaurantDtos.add(new RestaurantDto("ì˜¤ë¡œì§€ë¼ë©˜", "JAPANESE", "ì¼ë³¸ì‹ë¼ë©´", "02-733-9279",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 13-2", "ëˆì½”ì¸ ë¼ë©˜, ì˜¤ë¡œì§€ë¼ë©˜", "ì„œìš¸ ì¢…ë¡œêµ¬ ì¢…ë¡œ14ê¸¸ 16", "http://place.map.kakao.com/1414375847",
                 "1414375847","https://t1.daumcdn.net/cfile/tistory/99EF96375CE16DF009"));
 
-        restaurantDtos.add(new RestaurantDto("¿ÕºñÁı", "ÇÑ½Ä", "À°·ù°í±â", "02-720-3066",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 12-11", "¼Ò°¥ºñÁ¤½Ä, ÇÑ¿ìºÒ°í±âÁ¤½Ä", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î15±æ 24", "http://place.map.kakao.com/15232887",
+        restaurantDtos.add(new RestaurantDto("ì™•ë¹„ì§‘", "KOREAN", "ìœ¡ë¥˜ê³ ê¸°", "02-720-3066",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 12-11", "ì†Œê°ˆë¹„ì •ì‹, í•œìš°ë¶ˆê³ ê¸°ì •ì‹", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ15ê¸¸ 24", "http://place.map.kakao.com/15232887",
                 "15232887","https://media-cdn.tripadvisor.com/media/photo-s/07/ff/ac/d7/caption.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("°í¸Ş½Ä´ç", "ÇÑ½Ä", "À°·ù°í±â", "02-723-0999",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 43-5", "ÀÌº£¸®ÄÚ µÅÁö ²É¸ñ»ì, ¸íÇ° ¼÷¼º »ï°ã»ì", "¼­¿ï Á¾·Î±¸ Á¾·Î10±æ 14", "http://place.map.kakao.com/2131396403",
+        restaurantDtos.add(new RestaurantDto("ê³ ë©”ì‹ë‹¹", "KOREAN", "ìœ¡ë¥˜ê³ ê¸°", "02-723-0999",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 43-5", "ì´ë² ë¦¬ì½” ë¼ì§€ ê½ƒëª©ì‚´, ëª…í’ˆ ìˆ™ì„± ì‚¼ê²¹ì‚´", "ì„œìš¸ ì¢…ë¡œêµ¬ ì¢…ë¡œ10ê¸¸ 14", "http://place.map.kakao.com/2131396403",
                 "2131396403","https://mblogthumb-phinf.pstatic.net/MjAxNzA3MTdfMjA4/MDAxNTAwMjU4Mzk0OTE1.Zodr30xmueDpTJWHB8T6N_BYQdS4A_a8hCtDDvu_K0Qg.22FaJZp-zsGm1b4rj4J0MX9ZKqu9HZCVgcIOSoEmFKwg.JPEG.dieunjjang/image_955702301500258372498.jpg?type=w800"));
 
-        restaurantDtos.add(new RestaurantDto("½Ì½ÌÇØ¹°³ª¶ó", "ÇÑ½Ä", "ÇØ¹°»ı¼±È¸", "02-733-1226",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 11-1", "È°°íµî¾îÈ¸, °¥°íÈ¸, ±¤°íÈ¸", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î15±æ 13", "http://place.map.kakao.com/7977978",
+        restaurantDtos.add(new RestaurantDto("ì‹±ì‹±í•´ë¬¼ë‚˜ë¼", "KOREAN", "í•´ë¬¼ìƒì„ íšŒ", "02-733-1226",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 11-1", "í™œê³ ë“±ì–´íšŒ, ê°ˆê³ íšŒ, ê´‘ê³ íšŒ", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ15ê¸¸ 13", "http://place.map.kakao.com/7977978",
                 "7977978","https://s3-ap-northeast-1.amazonaws.com/dcreviewsresized/20211019104417_photo1_Nm0ULH5g8GOd.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("ÃÌ³ğ½¡ºÒ´ß°¥ºñ", "ÇÑ½Ä", "Ä¡Å²", "02-722-3852",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 6-4", "´ß¸ñ»ì±¸ÀÌ, Çãºê¼÷¼º¾ç³ä", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î19±æ 6", "http://place.map.kakao.com/1750296031",
+        restaurantDtos.add(new RestaurantDto("ì´Œë†ˆìˆ¯ë¶ˆë‹­ê°ˆë¹„", "KOREAN", "ì¹˜í‚¨", "02-722-3852",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 6-4", "ë‹­ëª©ì‚´êµ¬ì´, í—ˆë¸Œìˆ™ì„±ì–‘ë…", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ19ê¸¸ 6", "http://place.map.kakao.com/1750296031",
                 "1750296031","https://mblogthumb-phinf.pstatic.net/MjAxOTA5MjhfMjIg/MDAxNTY5Njc3NTM5MTcx.WZ4M7VVgCSN_cgnzFLwJKOVpmPLHVn0Z4yaSOFHKWvUg.3Xy8rKF71HPWDM2QP_vRUlGeCVSUq92otg4AIOVy-1Qg.JPEG.7533004/%EC%B4%8C%EB%86%88%EC%88%AF%EB%B6%88%EB%8B%AD%EA%B0%88%EB%B9%84.jpg?type=w800"));
 
-        restaurantDtos.add(new RestaurantDto("Â÷µ¹¹ÚÈùÂŞ²Ù¹Ì", "ÇÑ½Ä", "ÇØ¹°»ı¼±", "02-732-8806",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 175", "ÂŞ²Ù¹Ì µ¤¹ä, Â÷ÂŞ½ºÆä¼È±¸ÀÌ ¼¼Æ®", "¼­¿ï Á¾·Î±¸ »ïÀÏ´ë·Î17±æ 47-1", "http://place.map.kakao.com/26432860",
+        restaurantDtos.add(new RestaurantDto("ì°¨ëŒë°•íŒì­ˆê¾¸ë¯¸", "KOREAN", "í•´ë¬¼ìƒì„ ", "02-732-8806",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 175", "ì­ˆê¾¸ë¯¸ ë®ë°¥, ì°¨ì­ˆìŠ¤í˜ì…œêµ¬ì´ ì„¸íŠ¸", "ì„œìš¸ ì¢…ë¡œêµ¬ ì‚¼ì¼ëŒ€ë¡œ17ê¸¸ 47-1", "http://place.map.kakao.com/26432860",
                 "26432860","https://mblogthumb-phinf.pstatic.net/MjAyMDAzMjRfMjAy/MDAxNTg1MDQ4NTEzNjEy.Ww2o2mUBjJzzvWV5k68NTNx3HXoUpN0e9dJ45nJpHLkg.vu4vF1hMhDENgJ6y8x5nUJeYFPzvCIc8MHUTn5vR5mYg.JPEG.noty9240/1585048513241.JPG?type=w800"));
 
-        restaurantDtos.add(new RestaurantDto("Á¾·ÎÈ²¼Ò°öÃ¢", "ÇÑ½Ä", "°öÃ¢¸·Ã¢", "02-723-5157",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 18-8", "¼Ò°öÃ¢±¸ÀÌ, ³Ã¸é", "¼­¿ï Á¾·Î±¸ ¿ìÁ¤±¹·Î2±æ 31", "http://place.map.kakao.com/21396905",
+        restaurantDtos.add(new RestaurantDto("ì¢…ë¡œí™©ì†Œê³±ì°½", "KOREAN", "ê³±ì°½ë§‰ì°½", "02-723-5157",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 18-8", "ì†Œê³±ì°½êµ¬ì´, ëƒ‰ë©´", "ì„œìš¸ ì¢…ë¡œêµ¬ ìš°ì •êµ­ë¡œ2ê¸¸ 31", "http://place.map.kakao.com/21396905",
                 "21396905","https://d2uja84sd90jmv.cloudfront.net/posts/LJ_IYGvldp6xqfk7mQhaKw/m.jpg"));
 
-        restaurantDtos.add(new RestaurantDto("ÀÌ°­¼ø½ÇºñÁı", "ÇÑ½Ä", "ÇØ¹°»ı¼±", "02-737-7880",
-                "¼­¿ï Á¾·Î±¸ °üÃ¶µ¿ 11-11", "»ê³«ÁöººÀ½, ³«ÁöººÀ½", "¼­¿ï Á¾·Î±¸ Ã»°èÃµ·Î 75-1", "http://place.map.kakao.com/27146280",
+        restaurantDtos.add(new RestaurantDto("ì´ê°•ìˆœì‹¤ë¹„ì§‘", "KOREAN", "í•´ë¬¼ìƒì„ ", "02-737-7880",
+                "ì„œìš¸ ì¢…ë¡œêµ¬ ê´€ì² ë™ 11-11", "ì‚°ë‚™ì§€ë³¶ìŒ, ë‚™ì§€ë³¶ìŒ", "ì„œìš¸ ì¢…ë¡œêµ¬ ì²­ê³„ì²œë¡œ 75-1", "http://place.map.kakao.com/27146280",
                 "27146280","https://t1.daumcdn.net/cfile/tistory/253EDF3F532338B30A"));
 
         return restaurantDtos;

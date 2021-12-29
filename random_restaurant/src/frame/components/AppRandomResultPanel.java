@@ -1,48 +1,45 @@
 package frame.components;
 
 import frame.AppFrame;
-import service.RestaurantDB;
 import utils.ButtonUtils;
 import utils.PanelUtils;
-import utils.WindowHandler;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
+
+import static constant.Constants.APP_PANEL_IMG;
+import static constant.PanelCode.APP_RANDOM_RESULT;
 
 public class AppRandomResultPanel extends JPanel {
 
     private ButtonUtils buttonUtils;
     private PanelUtils panelUtils;
 
-
     /**
      * 생성자
      *
      * @param appFrame
-     * @param restaurantDB
+     * @param status
      */
-    public AppRandomResultPanel(AppFrame appFrame, RestaurantDB restaurantDB) {
+    public AppRandomResultPanel(AppFrame appFrame, String status) {
         setLayout(null);
         buttonUtils = new ButtonUtils();
         panelUtils = new PanelUtils();
 
-        // 마지막 인덱스의 데이터 추출
-        JLabel url = panelUtils.makeRandomResultByJLabel(restaurantDB).get(panelUtils.makeRandomResultByJLabel(restaurantDB).size() - 1);
-        panelUtils.makeRandomResultByJLabel(restaurantDB).stream().forEach(s -> {
+        // 객체의 사이즈 설정
+        int size = panelUtils.getRestaurantResult(status).size();
+
+        // 객체의 마지막 인덱스에 위치한 url 데이터를 추출
+        JLabel url = panelUtils.getRestaurantResult(status).get(size - 1);
+        panelUtils.getRestaurantResult(status).stream().forEach(s -> {
             add(s);
         });
 
-        JButton back = buttonUtils.goBack(appFrame, "appRandomResult");
-        add(back);
+        // 뒤로가기 버튼
+        add(buttonUtils.goBack(appFrame, APP_RANDOM_RESULT, status));
 
-        JButton openWindow = buttonUtils.openBrowser(url.getText());
-        openWindow.setBounds(80, 650, 230, 50);
-        add(openWindow);
+        // 웹 브라우져 오픈
+        add(buttonUtils.openKakaoMap(url.getText()));
     }
 
     /**
@@ -53,7 +50,7 @@ public class AppRandomResultPanel extends JPanel {
      */
     @Override
     public void paintComponent(Graphics g) {
-        Image image = new ImageIcon("./random_restaurant/resources/img/app_panel.png").getImage();
+        Image image = new ImageIcon(APP_PANEL_IMG).getImage();
         g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
     }
 }

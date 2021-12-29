@@ -1,7 +1,7 @@
 package utils;
 
+import constant.PanelCode;
 import frame.AppFrame;
-import model.ButtonActionStatusDto;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -9,88 +9,96 @@ import java.util.ArrayList;
 public interface Button {
 
     /**
-     * ¹è°æ, Å×µÎ¸®°¡ ¾ø´Â ¹öÆ°À» ¼³Á¤ÇÕ´Ï´Ù.
-     * @param btnName : ¹öÆ° ÅØ½ºÆ®
-     * @param imgPath : ÀÌ¹ÌÁö °æ·Î
-     * @param x : x ÁÂÇ¥
-     * @param y : y ÁÂÇ¥
-     * @param width : ±æÀÌ
-     * @param height : ³ôÀÌ
+     * ë°°ê²½, í…Œë‘ë¦¬ê°€ ì—†ëŠ” ë²„íŠ¼ì„ ì„¤ì •í•©ë‹ˆë‹¤.
+     * @param btnName : ë²„íŠ¼ í…ìŠ¤íŠ¸
+     * @param imgPath : ì´ë¯¸ì§€ ê²½ë¡œ
+     * @param x : x ì¢Œí‘œ
+     * @param y : y ì¢Œí‘œ
+     * @param width : ê¸¸ì´
+     * @param height : ë†’ì´
      * @return
      */
     JButton setTransparencyButton(String btnName, String imgPath, int x, int y, int width, int height);
 
     /**
-     * ¾Û ½ÇÇà ¹öÆ°
+     * ì•± ì‹¤í–‰ ë²„íŠ¼
      * @param appFrame
      * @return
      */
     JButton runApp(AppFrame appFrame);
 
     /**
-     * ÁøÇà ½ÃÀÛ ¹öÆ°
+     * ì§„í–‰ ì‹œì‘ ë²„íŠ¼
      * @param appFrame
      * @return
      */
     JButton start(AppFrame appFrame);
 
     /**
-     * Á¾·á ¹öÆ°
+     * ì¢…ë£Œ ë²„íŠ¼
      * @param appFrame
      * @return
      */
     JButton close(AppFrame appFrame);
 
     /**
-     * Á¾·á ¹öÆ°
+     * ì¢…ë£Œ ë²„íŠ¼
      * @param appFrame
-     * @param fromPanel
+     * @param panelCode
      * @return
      */
-    JButton goBack(AppFrame appFrame, String fromPanel);
+    JButton goBack(AppFrame appFrame, PanelCode panelCode, String status);
 
     /**
-     * ·£´ı ÆĞ³Î ÁøÀÔ ¹öÆ°
+     * ëœë¤ íŒ¨ë„ ì§„ì… ë²„íŠ¼
      * @param appFrame
      * @return
      */
     JButton goRandom(AppFrame appFrame);
 
     /**
-     * Ä«Å×°í¸® ÆĞ³Î ÁøÀÔ ¹öÆ°
+     * ì¹´í…Œê³ ë¦¬ íŒ¨ë„ ì§„ì… ë²„íŠ¼
      * @param appFrame
      * @return
      */
     JButton goCategory(AppFrame appFrame);
 
     /**
-     * ÇÑ½Ä,Áß½Ä,ÀÏ½Ä,¾ç½Ä,¾Æ½Ã¾È ¹öÆ° ¸®½ºÆ®
+     * í•œì‹,ì¤‘ì‹,ì¼ì‹,ì–‘ì‹,ì•„ì‹œì•ˆ ë²„íŠ¼ ë¦¬ìŠ¤íŠ¸
      * @param appFrame
-     * @param buttonActionStatusDto
      * @return
      */
-    ArrayList<JButton> getCountryBtn(AppFrame appFrame, ButtonActionStatusDto buttonActionStatusDto);
+    ArrayList<JButton> getCategoryBtnBtn(AppFrame appFrame);
 
     /**
-     * ·£´ı ÃßÃµ ½ÃÀÛ ¹öÆ°
+     * ëœë¤ ì¶”ì²œ ì‹œì‘ ë²„íŠ¼
      * @param appFrame
      * @return
      */
     JButton startRandom(AppFrame appFrame);
 
     /**
-     * ¹öÆ° ÀÌº¥Æ®·Î ÀÛµ¿µÇ´Â ¾²·¹µå¿¡
-     * interrupt ¸¦ ¹ß»ı½ÃÄÑ ÁßÁö ½ÃÅ°°í
-     * ¹öÆ°À» Àç¼³Á¤ ÇÏ°í ·£´ı °á°ú°ªÀ» º¸¿©ÁÖ´Â ÆĞ³Î·Î ÀÌµ¿ ½ÃÅµ´Ï´Ù.
+     * ë²„íŠ¼ ì´ë²¤íŠ¸ë¡œ ì‘ë™ë˜ëŠ” ì“°ë ˆë“œì—
+     * interrupt ë¥¼ ë°œìƒì‹œì¼œ ì¤‘ì§€ ì‹œí‚¤ê³ 
+     * ë²„íŠ¼ì„ ì¬ì„¤ì • í•˜ê³  ëœë¤ ê²°ê³¼ê°’ì„ ë³´ì—¬ì£¼ëŠ” íŒ¨ë„ë¡œ ì´ë™ ì‹œí‚µë‹ˆë‹¤.
      * @param thread
      * @param jButton
      */
-    void interruptRandomImgTread(Thread thread, JButton jButton, AppFrame appFrame);
+    void interruptRandomImgTread(Thread thread, JButton jButton, JLabel jLabel, AppFrame appFrame, String s);
 
     /**
-     * Ä«Ä«¿À¸Ê ºê¶ó¿ìÁ® È£Ãâ
+     * ì¹´ì¹´ì˜¤ë§µ ë¸Œë¼ìš°ì ¸ í˜¸ì¶œ
      * @param url
      * @return
      */
-    JButton openBrowser(String url);
+    JButton openKakaoMap(String url);
+
+
+    /**
+     * ì¹´ì¹´ì˜¤ë§µ ë¸Œë¼ìš°ì ¸ í˜¸ì¶œ
+     * @param url
+     * @return
+     */
+    JButton openGit(String url);
+
 }

@@ -6,22 +6,16 @@ import java.awt.*;
 public class FrameUtils implements Frame {
 
     @Override
-    public JFrame setBackgroundImg(JFrame jFrame) {
-        jFrame.setContentPane(new JLabel((new ImageIcon("./random_restaurant/resources/img/base_img.png"))));
-        return jFrame;
-    }
-
-    @Override
     public JFrame setFrameSettings(JFrame jFrame) {
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jFrame.setVisible(true);
         jFrame.setSize(410, 840);
         jFrame.setResizable(false);
-        // ÇÁ·¹ÀÓ »çÀÌÁî ¾ò±â
+        // í”„ë ˆì„ ì‚¬ì´ì¦ˆ ì–»ê¸°
         Dimension frameSize = jFrame.getSize();
-        // ¸ğ´ÏÅÍ »çÀÌÁî ¾ò±â
+        // ëª¨ë‹ˆí„° ì‚¬ì´ì¦ˆ ì–»ê¸°
         Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
-        // È­¸é Áß¾Ó¿¡ À§Ä¡ ½ÃÅ°±â
+        // í™”ë©´ ì¤‘ì•™ì— ìœ„ì¹˜ ì‹œí‚¤ê¸°
         jFrame.setLocation((screenSize.width - frameSize.width) / 2, (screenSize.height - frameSize.height) / 2);
         return jFrame;
     }

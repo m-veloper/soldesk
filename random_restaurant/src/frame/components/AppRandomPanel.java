@@ -1,9 +1,9 @@
 package frame.components;
 
-import constant.Country;
+import constant.CategoryBtnCode;
 import frame.AppFrame;
-import service.Restaurant;
 import utils.ButtonUtils;
+import utils.PanelUtils;
 
 import javax.swing.*;
 import java.awt.*;
@@ -11,34 +11,45 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
+import static constant.Constants.APP_PANEL_IMG;
+import static constant.Constants.KOREAN_FOOD_IMG;
+import static constant.PanelCode.APP_RANDOM;
+
 public class AppRandomPanel extends JPanel {
 
     private ButtonUtils buttonUtils;
-    JLabel foodImage;
+    private PanelUtils panelUtils;
+    private JLabel foodImage;
 
     /**
      * 생성자
      *
      * @param appFrame
      */
-    public AppRandomPanel(AppFrame appFrame) {
+    public AppRandomPanel(AppFrame appFrame, String status) {
+        System.out.println(status);
         setLayout(null);
         buttonUtils = new ButtonUtils();
+        panelUtils = new PanelUtils();
 
-        JButton back = buttonUtils.goBack(appFrame, "appRandom");
+        // 랜덤 시작 버튼
         JButton startRandom = buttonUtils.startRandom(appFrame);
 
-        JTextArea resultArea = new JTextArea();
-        resultArea.setBounds(80, 150, 200, 200);
-        resultArea.setBackground(Color.cyan);
+        // 로딩 텍스트 라벨
+        JLabel loading = panelUtils.makeLoadingLabel();
+        loading.setFont(new Font("", Font.BOLD, 35));
+        loading.setVisible(false);
 
-        foodImage = new JLabel("");
-        foodImage.setIcon(new ImageIcon("./random_restaurant/resources/img/food/korean_food.png"));
+        // 스레드를 위해 초기 이미지를 세팅합니다.
+        foodImage = new JLabel();
+        foodImage.setIcon(new ImageIcon(KOREAN_FOOD_IMG));
         foodImage.setBounds(100, 200, 200, 200);
 
+        // 뒤로가기 버튼
+        add(buttonUtils.goBack(appFrame, APP_RANDOM, status));
         add(foodImage);
-        add(back);
         add(startRandom);
+        add(loading);
 
         startRandom.addActionListener(new ActionListener() {
             @Override
@@ -46,9 +57,15 @@ public class AppRandomPanel extends JPanel {
                 // 쓰레드 시작
                 ImgThread imgThread = new ImgThread();
                 imgThread.start();
+
+                // 시작 버튼 비활성화
                 startRandom.setEnabled(false);
+                // 시작 버튼 안보이게
                 startRandom.setVisible(false);
-                buttonUtils.interruptRandomImgTread(imgThread, startRandom, appFrame);
+                // 로딩 버튼 보이고
+                loading.setVisible(true);
+                // 쓰레드 인터럽트를 위해 메소드 호출
+                buttonUtils.interruptRandomImgTread(imgThread, startRandom, loading, appFrame, status);
             }
         });
     }
@@ -61,7 +78,7 @@ public class AppRandomPanel extends JPanel {
      */
     @Override
     public void paintComponent(Graphics g) {
-        Image image = new ImageIcon("./random_restaurant/resources/img/app_panel.png").getImage();
+        Image image = new ImageIcon(APP_PANEL_IMG).getImage();
         g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
     }
 
@@ -73,7 +90,7 @@ public class AppRandomPanel extends JPanel {
 
         public ArrayList<String> getImgList() {
             ArrayList<String> imgList = new ArrayList<>();
-            Country.getCountry().stream().forEach(s -> imgList.add(s.get("foodImgPath")));
+            CategoryBtnCode.getCategoryInfo().stream().forEach(s -> imgList.add(s.get("foodImgPath")));
             return imgList;
         }
 

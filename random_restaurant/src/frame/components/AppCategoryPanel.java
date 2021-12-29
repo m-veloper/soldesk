@@ -1,34 +1,32 @@
 package frame.components;
 
 import frame.AppFrame;
-import model.ButtonActionStatusDto;
-import service.RestaurantDB;
 import utils.ButtonUtils;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
+
+import static constant.Constants.APP_PANEL_IMG;
+import static constant.PanelCode.APP_CATEGORY;
 
 public class AppCategoryPanel extends JPanel {
 
-    private  ButtonUtils buttonUtils;
-    private  ArrayList<JButton> countryBtnList;
+    private ButtonUtils buttonUtils;
 
     /**
      * 생성자
+     *
      * @param appFrame
-     * @param restaurantDB
      */
-    public AppCategoryPanel(AppFrame appFrame, RestaurantDB restaurantDB, ButtonActionStatusDto buttonActionStatusDto) {
+    public AppCategoryPanel(AppFrame appFrame) {
         setLayout(null);
         buttonUtils = new ButtonUtils();
-        countryBtnList = buttonUtils.getCountryBtn(appFrame, buttonActionStatusDto);
-        JButton back = buttonUtils.goBack(appFrame, "appCategory");
 
-        add(back);
-        countryBtnList.stream().forEach(s -> add(s));
+        // 돌아가기 버튼
+        add(buttonUtils.goBack(appFrame, APP_CATEGORY, null));
+
+        // 카테고리 버튼
+        buttonUtils.getCategoryBtnBtn(appFrame).stream().forEach(s -> add(s));
     }
 
     /**
@@ -39,7 +37,7 @@ public class AppCategoryPanel extends JPanel {
      */
     @Override
     public void paintComponent(Graphics g) {
-        Image image = new ImageIcon("./random_restaurant/resources/img/app_panel.png").getImage();
+        Image image = new ImageIcon(APP_PANEL_IMG).getImage();
         g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
     }
 }
