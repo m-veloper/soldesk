@@ -26,18 +26,21 @@
         
        public AppFrame() {
            CardLayout cards = new CardLayout();
-         
            getContentPane().setLayout(cards);
            getContentPane().add("testPanel", new TestPanel(this));
        }
            
 #### 프로세스 화면
+- 심플한걸 좋아하는 취향에 따라 간결하게 디자인 하였습니다.
+- 아이폰 앱 화면으로 구성하였으며, 프로세스 또한 하나의 프레임에서 원하는 화면으로 이동 또는, 뒤로갈 수 있습니다.
 
+![20211229_183515](https://user-images.githubusercontent.com/58251630/147649962-c91cb473-078b-4d2b-9418-8725497fee97.png)
+![20211229_183525](https://user-images.githubusercontent.com/58251630/147650014-1f18bced-d825-4a03-852d-42093bcbf96c.png)
+![20211229_183542](https://user-images.githubusercontent.com/58251630/147650016-650e0dc5-064b-495c-ad80-03d988bd9d0c.png)
+![20211229_183552](https://user-images.githubusercontent.com/58251630/147650017-8e7758f6-62c0-4282-b915-fdf75e1cc22d.png)
+![20211229_183612](https://user-images.githubusercontent.com/58251630/147650019-0d9b5e0d-fd96-4a63-833f-b4736c8082c6.png)
+![20211229_183635](https://user-images.githubusercontent.com/58251630/147650021-362f95a4-04ac-4aff-9dac-c135494026c4.png)
 
-
-
-
-  
 
 
 
