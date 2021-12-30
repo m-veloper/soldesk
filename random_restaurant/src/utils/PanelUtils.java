@@ -16,6 +16,7 @@ public class PanelUtils implements Panel {
 
     private RestaurantDB restaurantDB;
     private RestaurantDto restaurantDto;
+    private Restaurant restaurant;
 
     @Override
     public JLabel setJLabelSettings(String data, int x, int y, int width, int height) {
@@ -45,12 +46,14 @@ public class PanelUtils implements Panel {
         // dto 객체 생성
         restaurantDto = new RestaurantDto();
 
+        restaurant = new Restaurant();
+
         if(status.equals(RANDOM_STATUS)){
             // 랜덤일 경우
-            restaurantDto = new Restaurant().getRandomRestaurant(restaurantDB);
+            restaurantDto = restaurant.getRandomRestaurant(restaurantDB);
         }else {
             // 카테고리 선택일 경우
-            restaurantDto = new Restaurant().getRandomRestaurantByCategory(restaurantDB, status);
+            restaurantDto = restaurant.getRandomRestaurantByCategory(restaurantDB, status);
         }
 
         JLabel menuImg = this.setJLabelSettings(HtmlUtils.createImgHtml(restaurantDto.getImgUrl()), 57, 150, 300, 300);
